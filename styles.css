@@ -130,6 +130,32 @@ nav a .ext {
 /* ---------- SECTIONS ---------- */
 section.utilities { padding: 0 0 5rem; }
 
+.group + .group { margin-top: 4rem; }
+
+.group-head {
+  display: flex;
+  align-items: baseline;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  border-top: 1px solid var(--rule-strong);
+  padding-top: 1rem;
+  margin-bottom: 1.75rem;
+}
+
+.group-head h2 {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+.group-head p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -148,8 +174,12 @@ section.utilities { padding: 0 0 5rem; }
 /* ---------- CARD GRID ---------- */
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
+}
+
+@media (max-width: 960px) {
+  .card-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 .card {
